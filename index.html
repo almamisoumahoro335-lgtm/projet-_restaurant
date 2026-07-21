@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Gourmet - Restaurant Gastronomique</title>
+    <!-- Importation d'une jolie police Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Le Gourmet</div>
+        <button class="hamburger" aria-label="Menu" onclick="toggleMenu()">☰</button>
+        <div class="nav-links" aria-label="Navigation principale">
+            <a href="#accueil">Accueil</a>
+            <a href="#menu">La Carte</a>
+            <a href="#about">À Propos</a>
+            <a href="#chefs">Chefs</a>
+            <a href="#reservation">Réserver</a>
+            <a href="#testimonials">Avis</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- En-tête (Hero) -->
+    <header id="accueil" class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Restaurant Gastronomique</span>
+            <h1>Un voyage culinaire au cœur de Paris</h1>
+            <p>Découvrez une cuisine créative, des produits frais et un service attentif pour une expérience inoubliable.</p>
+            <div class="hero-actions">
+                <a href="#reservation" class="btn-resa">Réserver une table</a>
+                <a href="#menu" class="btn-secondary">Voir la carte</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section Menu -->
+    <section id="menu" class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Notre Carte</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="dish-name">Homard Grillé</div>
+                    <div class="dish-desc">Homard de premier choix servi avec une sauce beurre blanc et légumes de saison.</div>
+                    <div class="dish-price">28€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="dish-name">Risotto aux Cèpes</div>
+                    <div class="dish-desc">Risotto crémeux aux cèpes des Vosges et éclats de parmesan affiné.</div>
+                    <div class="dish-price">22€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="dish-name">Filet Mignon</div>
+                    <div class="dish-desc">Filet mignon rôti, purée de pomme de terre truffée et jus corsé.</div>
+                    <div class="dish-price">34€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="dish-name">Tarte Tatin</div>
+                    <div class="dish-desc">Tarte tatin aux pommes caramélisées et crème fouettée à la vanille.</div>
+                    <div class="dish-price">10€</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="about" class="section">
+        <div class="content-wrapper about-grid">
+            <div class="about-text">
+                <small>Depuis 1995</small>
+                <h2>Une cuisine raffinée inspirée par la saison</h2>
+                <p>Chez <strong>Le Gourmet</strong>, notre équipe transforme chaque service en une expérience personnalisée. Nos plats sont préparés avec des produits locaux choisis chaque matin.</p>
+                <div class="about-list">
+                    <div class="about-card">
+                        <h3>Produits frais</h3>
+                        <p>Nous travaillons en direct avec des producteurs pour offrir des ingrédients de qualité.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Ambiance élégante</h3>
+                        <p>Un cadre chaleureux et raffiné pour vos dîners d'affaires ou vos repas en famille.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Service attentif</h3>
+                        <p>Notre équipe est présente pour prendre soin de votre expérience du début à la fin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <!-- Section Chefs -->
+    <section id="chefs" class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Nos Chefs</h2>
+            <div class="team-grid">
+                <div class="chef-card">
+                    <h3>Pierre Laurent</h3>
+                    <p>Chef exécutif avec 20 ans d'expérience, spécialisé dans les plats de saison et les traditions françaises.</p>
+                    <small>Chef Exécutif</small>
+                </div>
+                <div class="chef-card">
+                    <h3>Élise Moreau</h3>
+                    <p>Responsable desserts, elle crée des pâtisseries élégantes et délicates pour clôturer chaque repas.</p>
+                    <small>Chef Pâtissière</small>
+                </div>
+                <div class="chef-card">
+                    <h3>Lucas Martin</h3>
+                    <p>Sommelier passionné, il sélectionne les vins pour accompagner parfaitement chaque plat.</p>
+                    <small>Sommelier</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Avis -->
+    <section id="testimonials" class="section" style="background: #f5f1ea;">
+        <div class="content-wrapper">
+            <h2 class="section-title">Avis clients</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <strong>"Un dîner sublime, chaque plat était parfait."</strong>
+                    <p>J'ai adoré l'ambiance et la qualité du service. Un restaurant à recommander.</p>
+                    <small>Camille R.</small>
+                </div>
+                <div class="testimonial-card">
+                    <strong>"Les desserts sont incroyables, et le personnel est très attentionné."</strong>
+                    <p>Une expérience mémorable pour un anniversaire en famille.</p>
+                    <small>Théo M.</small>
+                </div>
+                <div class="testimonial-card">
+                    <strong>"Le vin était parfaitement conseillé par le sommelier."</strong>
+                    <p>Un excellent rapport qualité/prix pour un restaurant gastronomique.</p>
+                    <small>Louise D.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Informations</h3>
+                    <p>Nous sommes situés au cœur de Paris. Pour toute question ou demande spéciale, contactez-nous.</p>
+                    <ul>
+                        <li>Adresse: 12 Rue de la Gastronomie, 75000 Paris</li>
+                        <li>Téléphone: <a href="tel:+33123456789">01 23 45 67 89</a></li>
+                        <li>Email: <a href="mailto:contact@legourmet.fr">contact@legourmet.fr</a></li>
+                        <li>Horaires: Lun-Sam 12h-23h</li>
+                    </ul>
+                </div>
+                <div class="contact-card contact-form">
+                    <h3>Envoyer un message</h3>
+                    <form onsubmit="envoyerMessage(event)">
+                        <div class="input-group">
+                            <label for="contact-name">Votre nom</label>
+                            <input id="contact-name" type="text" placeholder="Votre nom" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" type="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réservation -->
+    <section id="reservation" class="section reservation-section">
+        <div class="content-wrapper reservation-content">
+            <div class="reservation-copy">
+                <h2 class="section-title">Réserver une table</h2>
+                <p>Réservez votre table rapidement et facilement. Nous nous ferons un plaisir d'accueillir votre groupe pour un moment convivial et gourmand.</p>
+            </div>
+            <form onsubmit="envoyerRequete(event)">
+                <div class="input-group">
+                    <label for="name">Nom complet</label>
+                    <input id="name" name="name" type="text" placeholder="Votre nom" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Téléphone</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Numéro de téléphone" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Votre adresse email" required>
+                </div>
+                <div class="input-group">
+                    <label for="date">Date de réservation</label>
+                    <input id="date" name="date" type="date" required>
+                </div>
+                <div class="input-group">
+                    <label for="guests">Nombre de personnes</label>
+                    <select id="guests" name="guests" required>
+                        <option value="2">2 Personnes</option>
+                        <option value="3">3 Personnes</option>
+                        <option value="4">4 Personnes</option>
+                        <option value="5">5+ Personnes</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="notes">Demande spéciale</label>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Allergies, anniversaire, besoin particulier..."></textarea>
+                </div>
+                <button type="submit">Confirmer la réservation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; <span id="currentYear"></span> Le Gourmet. Tous droits réservés.</p>
+            <p>12 Rue de la Gastronomie, 75000 Paris · Tél: 01 23 45 67 89</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        const dateInput = document.getElementById('date');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.min = today;
+        }
+
+        function envoyerRequete(event) {
+            event.preventDefault();
+            alert('Merci ! Votre demande de réservation a été envoyée. Nous vous recontacterons sous peu.');
+            event.target.reset();
+        }
+
+        function envoyerMessage(event) {
+            event.preventDefault();
+            alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+            event.target.reset();
+        }
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
