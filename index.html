@@ -31,7 +31,7 @@
         <div class="hero-content">
             <span class="eyebrow">Restaurant Gastronomique</span>
             <h1>Un voyage culinaire au cœur de Paris</h1>
-            <p>Découvrez une cuisine créative, des produits frais et un service attentif pour une expérience inoubliable.</p>
+            <p>Laissez-vous séduire par notre cuisine inventive, nos produits locaux sélectionnés chaque jour et un service attentif pour un repas inoubliable.</p>
             <div class="hero-actions">
                 <a href="#reservation" class="btn-resa">Réserver une table</a>
                 <a href="#menu" class="btn-secondary">Voir la carte</a>
@@ -43,26 +43,37 @@
     <section id="menu" class="section">
         <div class="content-wrapper">
             <h2 class="section-title">Notre Carte</h2>
+            <p style="text-align:center; max-width: 720px; margin: 0 auto 2rem; color: #555;">Parcourez une sélection de plats signature et de créations de saison, élaborés avec soin pour offrir un équilibre parfait de saveurs, de textures et de couleurs.</p>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="dish-name">Homard Grillé</div>
-                    <div class="dish-desc">Homard de premier choix servi avec une sauce beurre blanc et légumes de saison.</div>
+                    <div class="dish-desc">Homard breton rôti, sauce beurre blanc et légumes croquants de saison.</div>
                     <div class="dish-price">28€</div>
                 </div>
                 <div class="menu-item">
                     <div class="dish-name">Risotto aux Cèpes</div>
-                    <div class="dish-desc">Risotto crémeux aux cèpes des Vosges et éclats de parmesan affiné.</div>
+                    <div class="dish-desc">Riz crémeux parfumé aux cèpes et parmesan affiné.</div>
                     <div class="dish-price">22€</div>
                 </div>
                 <div class="menu-item">
                     <div class="dish-name">Filet Mignon</div>
-                    <div class="dish-desc">Filet mignon rôti, purée de pomme de terre truffée et jus corsé.</div>
+                    <div class="dish-desc">Filet mignon rôti, purée de pomme de terre truffée et jus de viande réduit.</div>
                     <div class="dish-price">34€</div>
                 </div>
                 <div class="menu-item">
                     <div class="dish-name">Tarte Tatin</div>
-                    <div class="dish-desc">Tarte tatin aux pommes caramélisées et crème fouettée à la vanille.</div>
+                    <div class="dish-desc">Pommes caramélisées, pâte croustillante et crème fouettée à la vanille.</div>
                     <div class="dish-price">10€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="dish-name">Saumon en Croûte d’Herbes</div>
+                    <div class="dish-desc">Saumon élevé en Atlantique, croûte d'herbes fraîches, purée de céleri et jus citronné.</div>
+                    <div class="dish-price">26€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="dish-name">Crème Brûlée à la Vanille</div>
+                    <div class="dish-desc">Crème onctueuse et caramel croquant, parfumée à la gousse de vanille.</div>
+                    <div class="dish-price">11€</div>
                 </div>
             </div>
         </div>
@@ -74,7 +85,8 @@
             <div class="about-text">
                 <small>Depuis 1995</small>
                 <h2>Une cuisine raffinée inspirée par la saison</h2>
-                <p>Chez <strong>Le Gourmet</strong>, notre équipe transforme chaque service en une expérience personnalisée. Nos plats sont préparés avec des produits locaux choisis chaque matin.</p>
+                <p>Chez <strong>Le Gourmet</strong>, chaque service raconte une histoire : des ingrédients choisis auprès de producteurs locaux, des recettes revisitées avec finesse et un accueil chaleureux pour tous les convives.</p>
+                <p>Nous mettons l'accent sur l'authenticité, la qualité et l'équilibre, en proposant une cuisine gourmande où la fraîcheur et le plaisir sont toujours au rendez-vous.</p>
                 <div class="about-list">
                     <div class="about-card">
                         <h3>Produits frais</h3>
@@ -169,6 +181,10 @@
                             <input id="contact-email" type="email" placeholder="Votre email" required>
                         </div>
                         <div class="input-group">
+                            <label for="contact-subject">Sujet</label>
+                            <input id="contact-subject" type="text" placeholder="Sujet" required>
+                        </div>
+                        <div class="input-group">
                             <label for="contact-message">Message</label>
                             <textarea id="contact-message" rows="5" placeholder="Votre message" required></textarea>
                         </div>
@@ -229,38 +245,6 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const nav = document.querySelector('.nav-links');
-            nav.classList.toggle('active');
-        }
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
-        const dateInput = document.getElementById('date');
-        if (dateInput) {
-            const today = new Date().toISOString().split('T')[0];
-            dateInput.min = today;
-        }
-
-        function envoyerRequete(event) {
-            event.preventDefault();
-            alert('Merci ! Votre demande de réservation a été envoyée. Nous vous recontacterons sous peu.');
-            event.target.reset();
-        }
-
-        function envoyerMessage(event) {
-            event.preventDefault();
-            alert('Merci pour votre message ! Nous vous répondrons rapidement.');
-            event.target.reset();
-        }
-
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 
 </body>
 </html>
